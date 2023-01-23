@@ -11,7 +11,6 @@ const height = canvas.height = window.innerHeight;
 //ctx.globalCompositeOperation = 'xor';
 
 let drawOption;
-let startBtn = document.getElementById('generateButton');
 
 console.log(drawOption);
 console.log(ctx.globalCompositeOperation);
@@ -29,7 +28,7 @@ const generate = () => {
     animate(result);
 }
 
-startBtn.addEventListener("click", generate);
+document.getElementById('generateButton').addEventListener("click", generate);
 
 const cleanCanvas = () => {
     ctx.clearRect(0, 0, width, height);
